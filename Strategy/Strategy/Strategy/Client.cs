@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Strategy.GreetingAlgorithms;
 
 namespace Strategy
@@ -15,7 +14,6 @@ namespace Strategy
 
 	    public IEnumerable<string> ProcessNames(IEnumerable<string> names) 
 		{
-
 			return greetingStrategy.Execute (names);
 		}
 	}
