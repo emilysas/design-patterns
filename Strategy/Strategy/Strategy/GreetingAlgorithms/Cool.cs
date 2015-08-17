@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Strategy.GreetingAlgorithms;
 
 namespace Strategy.Algorithms
 {
-	public class Cool
+	public class Cool : IGreeting
 	{
 		public IEnumerable<string> Execute(IEnumerable<string> inputList)
 		{
