@@ -5,19 +5,21 @@ using System.Text;
 
 namespace Decorator
 {
-	public class TextViewWithScroll
+	public class ScrollDecorator : IVisualComponent
     {
         private int _topLine;
+        private IVisualComponent _wrapped;
 
-		public TextViewWithScroll(int topLine)
-        {
+		public ScrollDecorator(IVisualComponent wrapped, int topLine)
+		{
+		    _wrapped = wrapped;
             _topLine = topLine;
         }
 
         public void Draw()
         {
+            _wrapped.Draw();
 			GUI.DrawScrollBar(_topLine);
-			GUI.DrawTextView();
         }
     }
 }

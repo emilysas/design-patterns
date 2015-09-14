@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Decorator
+﻿namespace Decorator
 {
     class Program
     {
@@ -14,10 +9,10 @@ namespace Decorator
 
             // decorated text view
 			// TODO uncomment this line when you have refactored TextViewWithBorder and TextViewWithScroll
-			//var decoratedTextView = new BorderDecorator(new ScrollDecorator(textView, 54), 5);
+            var decoratedTextView = new BorderDecorator(new ScrollDecorator(textView, 54), 5);
 
 			// change this line to render your decorated text view
-			RenderView (textView);
+			RenderView (decoratedTextView);
         }
 
 		static void RenderView(IVisualComponent component)
