@@ -1,6 +1,7 @@
 ﻿using FactoryPattern.Implementations;
 using NUnit.Framework;
 
+
 namespace FactoryPatternTests
 {
     [TestFixture]

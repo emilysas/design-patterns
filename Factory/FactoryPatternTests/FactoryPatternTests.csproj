@@ -30,8 +30,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Money\lib\NUnit\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -51,8 +51,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryPatternExercise\FactoryPatternExercise.csproj">
+      <Project>{7062ab68-e57a-4316-84dd-ffb6f72dbbf2}</Project>
+      <Name>FactoryPatternExercise</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FactoryPattern\FactoryPatternExample.csproj">
-      <Project>{4726fff4-ddec-40bc-ba4e-eb6406b67db5}</Project>
+      <Project>{4726FFF4-DDEC-40BC-BA4E-EB6406B67DB5}</Project>
       <Name>FactoryPatternExample</Name>
     </ProjectReference>
   </ItemGroup>

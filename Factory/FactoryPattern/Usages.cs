@@ -137,5 +137,7 @@ Imagine how many unit tests I will need to write for this one method in order to
              - Its easy to add or remove implementations without the breaking the others
              */
         }
+
     }
 }
+

@@ -15,6 +15,7 @@ namespace FactoryPatternTests
             var calculator = averageCalculatorFactory.CreateCalculator(CalculatorType.Median);
 
             Assert.That(calculator, Is.TypeOf<Median>());
+
         }
 
         [Test]
