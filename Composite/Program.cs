@@ -15,31 +15,21 @@ namespace Composite
             var sergei = new Meerkat("Sergei");
             var mostBeautiousSisterofSergei = new Meerkat("Beautious Sister Of Sergei");
 
-            //var brotherOfSergeiAlwaysWithTheScratching = new Meerkat("Scratching Brother of Sergei");
-            //var wifeOfScratchingBrother = new Meerkat("Wife of Scratching Brother");
-            //var scratchyBaby = new Meerkat("Baby of Scratching Brother");
-            //var familyMeThinksHasFleas = new Mob{Name = "Sergei Scratchy Extended Family", Members = {brotherOfSergeiAlwaysWithTheScratching, wifeOfScratchingBrother, scratchyBaby}};
+            var brotherOfSergeiAlwaysWithTheScratching = new Meerkat("Scratching Brother of Sergei");
+            var wifeOfScratchingBrother = new Meerkat("Wife of Scratching Brother");
+            var scratchyBaby = new Meerkat("Baby of Scratching Brother");
+            var familyMeThinksHasFleas = new Mob { Name = "Sergei Scratchy Extended Family", Members = { brotherOfSergeiAlwaysWithTheScratching, wifeOfScratchingBrother, scratchyBaby } };
             
-            var sergeiFamily = new Mob {Name = "family of Sergei", Members = {sergei, mostBeautiousSisterofSergei}}; //add familyMeThinksHasFleas into the extended sergeiFamily Mob
+            var sergeiFamily = new Mob {Name = "family of Sergei", Members = {sergei, mostBeautiousSisterofSergei, familyMeThinksHasFleas}}; //add familyMeThinksHasFleas into the extended sergeiFamily Mob
             
             var mothermabobOfBogdan = new Meerkat("Mothermabob of Bogdan");
             var fathermabobOfBogdan = new Meerkat("Fathermabob of Bogdan");
             var bogdanFamily = new Mob {Name = "family of Bogdan", Members = {bogdan, mothermabobOfBogdan, fathermabobOfBogdan}};
 
-            // simplify this to avoid using two Lists?
-            var meerkovaVillagers = new List<Meerkat> {maiya, vassily, yakov};
-            var meerkovaVillageFamilies = new List<Mob> {sergeiFamily, bogdanFamily};
-            
-            // simplify this to avoid using any foreach loops
-            foreach (var meerkat in meerkovaVillagers)
-            {
-                meerkat.InviteMyMostStupendousParty();
-            }
 
-            foreach (var meerkatFamily in meerkovaVillageFamilies)
-            {
-               meerkatFamily.InviteEveryoneInFamilyToMyMostStupendousParty();
-            }
+            var meerkovaVillagers = new Mob {Name = "Villagers", Members = {maiya, vassily, yakov, sergeiFamily, bogdanFamily}};
+            
+            meerkovaVillagers.InviteMyMostStupendousParty();
 
             Console.ReadLine();
         }
